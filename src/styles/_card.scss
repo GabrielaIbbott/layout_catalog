@@ -1,0 +1,52 @@
+.card {
+  background: $color-light;
+  border: 1px solid $color-border;
+  border-radius: $radius;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform $transition-base,
+    box-shadow $transition-base;
+
+  &:hover {
+    transform: translateY(-0.25rem);
+    box-shadow: 0 0.25rem 0.63rem rgba(0, 0, 0, 0.1);
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  &__body {
+    padding: $spacing-md;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  &__description {
+    font-size: 0.9rem;
+    color: $color-text;
+    margin: 0;
+  }
+
+  &__link {
+    margin-top: auto;
+    text-decoration: none;
+    color: $color-primary;
+    font-weight: bold;
+    transition: color $transition-base;
+
+    &:hover {
+      color: $color-primary-hover;
+    }
+  }
+}

@@ -20,8 +20,216 @@
       href="styles/index.scss"
     />
   </head>
-
   <body>
-    <h1>Catalog</h1>
+    <header
+      class="header"
+      data-qa="header"
+    >
+      <div
+        class="header__logo"
+        data-qa="header-logo"
+      >
+        MOYO
+      </div>
+      <nav
+        class="header__nav"
+        data-qa="header-nav"
+        aria-label="Main navigation"
+      >
+        <ul class="header__list">
+          <li class="header__item">
+            <a
+              href="#"
+              class="header__link"
+              data-qa="nav-link"
+            >
+              Apple
+            </a>
+          </li>
+          <li class="header__item">
+            <a
+              href="#"
+              class="header__link"
+              data-qa="nav-link"
+            >
+              Samsung
+            </a>
+          </li>
+          <li class="header__item">
+            <a
+              href="#"
+              class="header__link"
+              data-qa="nav-link"
+            >
+              Smartphones
+            </a>
+          </li>
+          <li class="header__item">
+            <a
+              href="#"
+              class="header__link"
+              data-qa="nav-link"
+            >
+              Laptops & Computers
+            </a>
+          </li>
+          <li class="header__item">
+            <a
+              href="#"
+              class="header__link"
+              data-qa="nav-link"
+            >
+              Gadgets
+            </a>
+          </li>
+          <li class="header__item">
+            <a
+              href="#"
+              class="header__link"
+              data-qa="nav-link"
+            >
+              Tablets
+            </a>
+          </li>
+          <li class="header__item">
+            <a
+              href="#"
+              class="header__link"
+              data-qa="nav-link"
+            >
+              Photo
+            </a>
+          </li>
+          <li class="header__item">
+            <a
+              href="#"
+              class="header__link"
+              data-qa="nav-link"
+            >
+              Video
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main
+      class="catalog"
+      data-qa="catalog"
+    >
+      <h1
+        class="catalog__title"
+        data-qa="catalog-title"
+      >
+        Our Products
+      </h1>
+
+      <section
+        class="catalog__grid"
+        data-qa="catalog-grid"
+      >
+        <article
+          class="card"
+          data-qa="card"
+        >
+          <img
+            src="https://via.placeholder.com/300x200"
+            alt="Product 1"
+            class="card__image"
+            data-qa="card-image"
+          />
+          <div class="card__body">
+            <h2
+              class="card__title"
+              data-qa="card-title"
+            >
+              APPLE A1419 iMac 27" Retina 5K Monoblock (MNED2UA/A)
+            </h2>
+            <p
+              class="card__description"
+              data-qa="card-description"
+            >
+              Product code: 195434
+            </p>
+            <div
+              class="stars"
+              data-qa="stars"
+              aria-label="Rating: 4 out of 5 stars"
+            >
+              <span class="stars__item stars__item--active"></span>
+              <span class="stars__item stars__item--active"></span>
+              <span class="stars__item stars__item--active"></span>
+              <span class="stars__item stars__item--active"></span>
+              <span class="stars__item"></span>
+            </div>
+            <p class="card__price">
+              Price:
+              <strong>$2,199</strong>
+            </p>
+            <a
+              href="#"
+              class="card__link"
+              data-qa="card-link"
+            >
+              BUY
+            </a>
+          </div>
+        </article>
+
+        <article
+          class="card"
+          data-qa="card"
+        >
+          <img
+            src="https://via.placeholder.com/300x200"
+            alt="Product 2"
+            class="card__image"
+            data-qa="card-image"
+          />
+          <div class="card__body">
+            <h2
+              class="card__title"
+              data-qa="card-title"
+            >
+              APPLE A1419 iMac 27" Retina 5K Monoblock (MNED2UA/A)
+            </h2>
+            <p
+              class="card__description"
+              data-qa="card-description"
+            >
+              Product code: 195434
+            </p>
+            <div
+              class="stars"
+              data-qa="stars"
+            >
+              <span class="stars__item stars__item--active"></span>
+              <span class="stars__item stars__item--active"></span>
+              <span class="stars__item stars__item--active"></span>
+              <span class="stars__item"></span>
+              <span class="stars__item"></span>
+            </div>
+            <p class="card__price">
+              Price:
+              <strong>$2,199</strong>
+            </p>
+            <a
+              href="#"
+              class="card__link"
+              data-qa="card-link"
+            >
+              BUY
+            </a>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer
+      class="footer"
+      data-qa="footer"
+    >
+      <p class="footer__text">&copy; 2025 MyCatalog. All rights reserved.</p>
+    </footer>
   </body>
 </html>

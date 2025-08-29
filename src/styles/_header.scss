@@ -1,0 +1,40 @@
+.header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  padding: $spacing-md $spacing-lg;
+  background-color: $color-light;
+  border-bottom: 1px solid $color-border;
+
+  &__logo {
+    font-size: $font-size-xl;
+    font-weight: bold;
+    color: $color-primary;
+  }
+
+  &__nav {
+    justify-self: end;
+  }
+
+  &__list {
+    display: flex;
+    gap: $spacing-md;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    margin: 0;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-dark;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
