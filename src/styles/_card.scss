@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 .card {
   background: $color-light;
   border: 1px solid $color-border;
@@ -24,7 +26,7 @@
     padding: $spacing-md;
     display: flex;
     flex-direction: column;
-    gap: $spacing-sm;
+    gap: 0.5rem;
   }
 
   &__title {
@@ -38,6 +40,12 @@
     margin: 0;
   }
 
+  &__price {
+    font-size: 1rem;
+    font-weight: 500;
+    color: $color-text;
+  }
+
   &__link {
     margin-top: auto;
     text-decoration: none;
@@ -46,7 +54,7 @@
     transition: color $transition-base;
 
     &:hover {
-      color: $color-primary-hover;
+      color: $primary-dark;
     }
   }
 }
