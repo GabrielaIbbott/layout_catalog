@@ -1,5 +1,10 @@
 @use 'variables' as *;
 
+$stars-gap: 7px;
+$stars-margin-vertical: 0.35rem;
+$star-width: 13px;
+$star-height: 15px;
+
 .stars {
   gap: 7px;
   align-items: center;

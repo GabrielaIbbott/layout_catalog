@@ -13,7 +13,6 @@ $color-base: #060b35;
 $color-primary: #00acdc;
 $color-title-hover: #34568b;
 $bg: #fff;
-$main--size: 14px;
 
 :root {
   --color-base: #{$color-base};
@@ -29,7 +28,6 @@ $main--size: 14px;
   --text: #{$text};
   --muted: #{$muted};
   --bg: #{$bg};
-  --main-size: #{$main--size};
   --border: #{$border};
   --radius: #{$radius};
 }
