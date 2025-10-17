@@ -1,19 +1,18 @@
 @use 'variables' as *;
 
 .stars {
-  display: flex;
-  gap: 0.25rem; // $spacing-sm / 2 arredondado para 2 casas
+  gap: 7px;
+  align-items: center;
+  margin: 0.35rem 0;
+}
 
-  &__item {
-    width: 1rem;
-    height: 1rem;
-    background: $color-border;
-    mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 24 24'><path d='M12 .587l3.668 7.568L24 9.75l-6 5.847 1.417 8.264L12 19.771 4.583 23.861 6 15.597 0 9.75l8.332-1.595z'/></svg>")
-      no-repeat center / contain;
-    transition: background $transition-base;
+.stars__item {
+  display: inline-block;
+  width: 13px;
+  height: 15px;
+  background: url('../images/star.svg') no-repeat center/contain;
+}
 
-    &--active {
-      background: $color-primary;
-    }
-  }
+.stars__item--active {
+  background: url('../images/star-active.svg') no-repeat center/contain;
 }

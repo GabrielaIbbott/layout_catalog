@@ -1,60 +1,129 @@
 @use 'variables' as *;
 
 .card {
-  background: $color-light;
-  border: 1px solid $color-border;
-  border-radius: $radius;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  width: var(--card-width);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  overflow: visible;
+  text-align: left;
+  position: relative;
+  transform-origin: center center;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   transition:
-    transform $transition-base,
-    box-shadow $transition-base;
+    transform var(--dur) ease,
+    box-shadow var(--dur) ease;
+  will-change: transform;
 
   &:hover {
-    transform: translateY(-0.25rem);
-    box-shadow: 0 0.25rem 0.63rem rgba(0, 0, 0, 0.1);
+    transform: scale(1.2);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+    z-index: 3;
   }
+}
 
-  &__image {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
+.card__image {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  padding: 1rem 1rem 0;
+  background: var(--bg);
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
 
-  &__body {
-    padding: $spacing-md;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
+.card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 
-  &__title {
-    font-size: 1.2rem;
-    margin: 0;
-  }
+.card__body {
+  display: grid;
+  grid-auto-rows: min-content;
+  gap: 0.6rem;
+  padding: 1rem;
+}
 
-  &__description {
-    font-size: 0.9rem;
-    color: $color-text;
-    margin: 0;
-  }
+.card__text {
+  display: grid;
+  gap: 2px;
+}
 
-  &__price {
-    font-size: 1rem;
-    font-weight: 500;
-    color: $color-text;
-  }
+.card__title {
+  font-size: 0.72rem;
+  line-height: 1.35;
+  margin-bottom: 0.35rem;
+  font-weight: 600;
+  color: var(--text);
+  transition: color var(--dur) ease;
+}
 
-  &__link {
-    margin-top: auto;
-    text-decoration: none;
-    color: $color-primary;
-    font-weight: bold;
-    transition: color $transition-base;
+.card:hover .card__title {
+  color: var(--color-title-hover);
+}
 
-    &:hover {
-      color: $primary-dark;
-    }
+.card__description {
+  font-size: 0.62rem;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.card__rating {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: start;
+  gap: 20px;
+  margin-bottom: 7px;
+}
+
+.stars {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 7px;
+}
+
+.card__reviews {
+  font-size: 0.62rem;
+  color: var(--muted);
+}
+
+.card__price {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.card__price strong {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.card__button {
+  display: block;
+  width: calc(100% - 32px);
+  margin: 0 16px 16px;
+  padding: 12px 0;
+  text-align: center;
+  font-weight: 700;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  background: var(--color-primary);
+  color: #fff;
+  transition:
+    background-color var(--dur),
+    color var(--dur),
+    border-color var(--dur);
+
+  &:hover {
+    background: #fff;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
   }
 }

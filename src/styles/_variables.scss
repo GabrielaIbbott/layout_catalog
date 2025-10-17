@@ -1,10 +1,29 @@
-$spacing-sm: 0.5rem;
-$spacing-md: 1rem;
-$spacing-lg: 2rem;
-$color-light: #fff;
-$color-text: #333;
-$color-primary: #007bff;
-$primary-dark: color.adjust($color-primary, $lightness: -10%);
-$color-border: #ddd;
-$radius: 0.5rem;
-$transition-base: 0.3s ease;
+:root {
+  --color-base: #{$color-base};
+  --color-primary: #{$color-primary};
+  --color-title-hover: #{$color-title-hover};
+  --pad-x: #{$pad-x};
+  --pad-y: #{$pad-y};
+  --gap-x: #{$gap-x};
+  --gap-y: #{$gap-y};
+  --card-width: #{$card-width};
+  --dur: #{$dur};
+  --ease: #{$ease};
+  --text: #{$text};
+  --muted: #{$muted};
+  --bg: #{$bg};
+  --border: #{$border};
+  --radius: #{$radius};
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
