@@ -1,3 +1,20 @@
+$pad-y: 50px;
+$pad-x: 40px;
+$gap-x: 46px;
+$gap-y: 48px;
+$card-width: 200px;
+$dur: 300ms;
+$ease: ease;
+$text: #1b1b1b;
+$muted: #7b7b7b;
+$border: #e6e6e6;
+$radius: 8px;
+$color-base: #060b35;
+$color-primary: #00acdc;
+$color-title-hover: #34568b;
+$bg: #fff;
+$main--size: 14px;
+
 :root {
   --color-base: #{$color-base};
   --color-primary: #{$color-primary};
@@ -12,6 +29,7 @@
   --text: #{$text};
   --muted: #{$muted};
   --bg: #{$bg};
+  --main-size: #{$main--size};
   --border: #{$border};
   --radius: #{$radius};
 }
