@@ -1,20 +1,16 @@
 @use 'variables' as *;
 
-$stars-gap: 7px;
-$stars-margin-vertical: 0.35rem;
-$star-width: 13px;
-$star-height: 15px;
-
 .stars {
-  gap: 7px;
+  display: flex;
+  gap: $stars-gap;
   align-items: center;
-  margin: 0.35rem 0;
+  margin: $stars-margin-vertical 0;
 }
 
 .stars__item {
   display: inline-block;
-  width: 13px;
-  height: 15px;
+  width: $star-width;
+  height: $star-height;
   background: url('../images/star.svg') no-repeat center/contain;
 }
 

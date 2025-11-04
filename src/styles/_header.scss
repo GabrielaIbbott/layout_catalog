@@ -1,67 +1,58 @@
 @use 'variables' as *;
 
 .header {
-  display: block;
   background: var(--bg);
-  border-bottom: 1px solid var(--border);
-  padding: 8px 0;
+  border-bottom: 1px solid #f2f2f2;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  padding: 0.5rem 0;
 }
 
 .header__container {
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 200px 1fr auto;
+  display: flex;
   align-items: center;
-  gap: 1rem;
-  padding: 0 16px;
+  justify-content: space-between;
+  padding: 0 24px;
 }
 
 .header__logo {
-  grid-column: 1;
+  flex-shrink: 0;
+  margin-left: 25px;
 }
 
 .header__logo-img {
-  display: block;
-  align-items: center;
   height: 40px;
 }
 
 .header__nav {
-  grid-column: 2;
-  justify-self: center;
-  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 20px;
 }
 
 .header__list {
-  display: grid;
-  font-weight: 600;
-  grid-auto-flow: column;
-  gap: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
   list-style: none;
   padding: 0;
-  margin-right: 15px;
-  justify-content: end;
-  align-items: center;
-}
-
-.header__actions {
-  grid-column: 3;
-  justify-self: end;
+  margin: 0;
+  font-weight: 600;
 }
 
 .header__link {
+  position: relative;
   color: var(--color-base);
   text-decoration: none;
-  font-size: 0.75rem;
-  font-weight: 550;
-  letter-spacing: -0.5px;
+  font-size: 0.78rem;
+  font-weight: 600;
   text-transform: uppercase;
+  letter-spacing: -0.3px;
   padding: 6px 0;
-  display: inline-block;
-  position: relative;
-  transition: color var(--dur) ease;
-  line-height: 1;
+  transition: color var(--dur) var(--ease);
 }
 
 .header__link:hover,
@@ -78,9 +69,37 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -18px;
-  width: 37px;
+  bottom: -16px;
+  width: 36px;
   height: 4px;
   background: var(--color-primary);
-  border-radius: 0.2rem;
+  border-radius: 2px;
+  z-index: 2;
+}
+
+@media (max-width: 520px) {
+  .header {
+    padding: 0.6rem 0;
+  }
+
+  .header__container {
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: 0 12px;
+  }
+
+  .header__nav {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .header__list {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+  }
+
+  .header__logo-img {
+    height: 36px;
+  }
 }

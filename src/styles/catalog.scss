@@ -1,7 +1,7 @@
 @use 'variables' as *;
 
 .catalog {
-  padding: (var(--pad-y) var(--pad-x));
+  padding: var(--pad-y) var(--pad-x);
 }
 
 .catalog__grid {
@@ -24,17 +24,6 @@
   }
 
   @media (max-width: 487px) {
-    padding: 0 (var(--pad-x) / 2);
-  }
-}
-
-.card {
-  width: var(--card-width);
-  transition: transform var(--dur) ease;
-  will-change: transform;
-
-  &:hover {
-    transform: scale(1.2);
-    z-index: 3;
+    padding: 0 calc(var(--pad-x) / 2);
   }
 }

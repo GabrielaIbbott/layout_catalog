@@ -1,4 +1,5 @@
 @use 'variables' as *;
+@use 'stars' as *;
 
 .card {
   display: grid;
@@ -12,12 +13,12 @@
   transform-origin: center center;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   transition:
-    transform var(--dur) ease,
-    box-shadow var(--dur) ease;
+    transform var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease);
   will-change: transform;
 
   &:hover {
-    transform: scale(1.2);
+    transform: scale(1.05);
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
     z-index: 3;
   }
@@ -27,15 +28,15 @@
   display: grid;
   place-items: center;
   width: 100%;
-  padding: 1rem 1rem 0;
+  padding: 1rem;
   background: var(--bg);
   margin-top: 15px;
-  margin-bottom: 25px;
+  margin-bottom: 10px;
 }
 
 .card__img {
-  width: 100%;
-  height: 100%;
+  width: 96%;
+  height: auto;
   object-fit: contain;
 }
 
@@ -53,36 +54,49 @@
 
 .card__title {
   font-size: 0.72rem;
-  line-height: 1.35;
+  line-height: 1.5;
   margin-bottom: 0.35rem;
   font-weight: 600;
   color: var(--text);
-  transition: color var(--dur) ease;
-}
+  transition: color var(--dur) var(--ease);
 
-.card:hover .card__title {
-  color: var(--color-title-hover);
+  .card:hover & {
+    color: var(--color-title-hover);
+  }
 }
 
 .card__description {
   font-size: 0.62rem;
   color: var(--muted);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .card__rating {
-  display: grid;
-  grid-auto-flow: column;
+  display: flex;
   align-items: center;
-  justify-content: start;
   gap: 20px;
-  margin-bottom: 7px;
+  margin-bottom: var(--stars-margin-vertical, 0.35rem);
 }
 
 .stars {
-  display: grid;
-  grid-auto-flow: column;
-  gap: 7px;
+  display: flex;
+  gap: var(--stars-gap, 7px);
+  align-items: center;
+  line-height: 0;
+}
+
+.stars__item {
+  display: inline-block;
+  width: var(--star-width, 13px);
+  height: var(--star-height, 15px);
+  background-image: url('../images/star.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.stars__item--active {
+  background-image: url('../images/star-active.svg');
 }
 
 .card__reviews {
@@ -97,25 +111,28 @@
   font-size: 0.75rem;
   color: var(--muted);
   margin-bottom: 0.5rem;
-}
 
-.card__price strong {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--text);
+  strong {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text);
+  }
 }
 
 .card__button {
   display: block;
   width: calc(100% - 32px);
-  margin: 0 16px 16px;
+  margin: -7px 16px 16px; /* ⬅️ diminui o espaço de cima (antes era 0) */
   padding: 12px 0;
   text-align: center;
-  font-weight: 700;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  font-size: 0.85rem;
   border: 1px solid transparent;
   border-radius: 5px;
   background: var(--color-primary);
   color: #fff;
+  text-decoration: none;
   transition:
     background-color var(--dur),
     color var(--dur),
@@ -125,5 +142,6 @@
     background: #fff;
     color: var(--color-primary);
     border-color: var(--color-primary);
+    text-decoration: none;
   }
 }
