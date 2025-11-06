@@ -2,18 +2,18 @@
 
 .stars {
   display: flex;
-  gap: $stars-gap;
   align-items: center;
+  gap: $stars-gap;
   margin: $stars-margin-vertical 0;
 }
 
 .stars__item {
-  display: inline-block;
   width: $star-width;
   height: $star-height;
-  background: url('../images/star.svg') no-repeat center/contain;
+  background: url('../images/star.svg') no-repeat center / contain;
+  flex-shrink: 0;
 }
 
 .stars__item--active {
-  background: url('../images/star-active.svg') no-repeat center/contain;
+  background: url('../images/star-active.svg') no-repeat center / contain;
 }

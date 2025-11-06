@@ -8,7 +8,7 @@
   background: $bg;
   border-bottom: 1px solid #f2f2f2;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
-  padding: 0.6rem $pad-x;
+  padding: 0.6rem $pad-y;
 }
 
 .header__logo-img {
@@ -47,7 +47,7 @@
   font-size: 0.75rem;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: -0.3px;
+  letter-spacing: normal;
   padding: 0 6px;
   transition: color $dur $ease;
 

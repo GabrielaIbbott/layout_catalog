@@ -31,11 +31,11 @@
   padding: 1rem;
   background: $bg;
   margin-top: 16px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .card__img {
-  width: 96%;
+  width: 95%;
   height: auto;
   object-fit: contain;
 }
@@ -100,7 +100,7 @@
 
 .card__reviews {
   font-size: 0.62rem;
-  color: $muted;
+  color: $text;
 }
 
 .card__price {
@@ -109,13 +109,12 @@
   align-items: center;
   font-size: 0.75rem;
   color: $muted;
-  margin-top: -2px;
   margin-bottom: 0.75rem;
 
   strong {
     font-size: 1rem;
     font-weight: 700;
-    color: $text;
+    color: black;
   }
 }
 
