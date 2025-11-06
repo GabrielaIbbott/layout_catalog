@@ -1,29 +1,29 @@
 @use 'variables' as *;
 
 .catalog {
-  padding: var(--pad-y) var(--pad-x);
+  padding: $pad-y $pad-x;
 }
 
 .catalog__grid {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(1, var(--card-width));
-  gap: var(--gap-y) var(--gap-x);
+  grid-template-columns: repeat(1, $card-width);
+  gap: $gap-y $gap-x;
   margin: 0 auto;
 
   @media (min-width: 488px) {
-    grid-template-columns: repeat(2, var(--card-width));
+    grid-template-columns: repeat(2, $card-width);
   }
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(3, var(--card-width));
+    grid-template-columns: repeat(3, $card-width);
   }
 
   @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, var(--card-width));
+    grid-template-columns: repeat(4, $card-width);
   }
 
   @media (max-width: 487px) {
-    padding: 0 calc(var(--pad-x) / 2);
+    padding: 0 calc(#{$pad-x} / 2);
   }
 }

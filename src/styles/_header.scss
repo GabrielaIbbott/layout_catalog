@@ -1,91 +1,90 @@
 @use 'variables' as *;
 
 .header {
-  background: var(--bg);
-  border-bottom: 1px solid #f2f2f2;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
-  padding: 0.5rem 0;
-}
-
-.header__container {
-  max-width: 1200px;
-  margin: 0 auto;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 24px;
-}
-
-.header__logo {
-  flex-shrink: 0;
-  margin-left: 25px;
+  background: $bg;
+  border-bottom: 1px solid #f2f2f2;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  padding: 0.6rem $pad-x;
 }
 
 .header__logo-img {
   height: 40px;
+  display: block;
 }
 
 .header__nav {
-  flex: 1;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  margin-right: 25px;
 }
 
 .header__list {
   display: flex;
   align-items: center;
-  gap: 1.3rem;
   list-style: none;
   padding: 0;
   margin: 0;
   font-weight: 500;
 }
 
+.header__list > li {
+  margin-right: 0.5rem;
+}
+
+.header__list > li:last-child {
+  margin-right: 0;
+}
+
 .header__link {
-  position: relative;
-  color: var(--color-base);
+  display: flex;
+  align-items: center;
+  height: 40px;
+  color: $color-base;
   text-decoration: none;
   font-size: 0.75rem;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: -0.3px;
-  padding: 6px 0;
-  transition: color var(--dur) var(--ease);
+  padding: 0 6px;
+  transition: color $dur $ease;
+
+  &:hover,
+  &:focus-visible {
+    color: $color-primary;
+  }
 }
 
-.header__link:hover,
-.header__link:focus-visible {
-  color: var(--color-primary);
-}
+.is-active {
+  position: relative;
+  color: $color-primary;
 
-.header__link.is-active {
-  color: var(--color-primary);
-}
-
-.header__link.is-active::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -16px;
-  width: 36px;
-  height: 4px;
-  background: var(--color-primary);
-  border-radius: 2px;
-  z-index: 2;
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 36px;
+    height: 4px;
+    background: $color-primary;
+    border-radius: 2px;
+    z-index: 2;
+  }
 }
 
 @media (max-width: 520px) {
   .header {
-    padding: 0.6rem 0;
+    padding: 0.6rem 12px;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
   }
 
-  .header__container {
-    flex-direction: column;
-    gap: 0.6rem;
-    padding: 0 11px;
+  .header__logo {
+    margin-bottom: 0.25rem;
   }
 
   .header__nav {
@@ -95,11 +94,21 @@
 
   .header__list {
     flex-wrap: wrap;
-    gap: 0.8rem;
-    justify-content: center;
+  }
+
+  .header__list > li {
+    margin-right: 0.8rem;
   }
 
   .header__logo-img {
     height: 36px;
+  }
+
+  .header__link {
+    height: 36px;
+  }
+
+  .is-active::after {
+    bottom: -12px;
   }
 }

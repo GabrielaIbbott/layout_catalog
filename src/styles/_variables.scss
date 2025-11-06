@@ -3,40 +3,22 @@ $pad-x: 40px;
 $gap-x: 46px;
 $gap-y: 48px;
 $card-width: 200px;
+$radius: 8px;
 $dur: 300ms;
 $ease: ease;
-$text: #1b1b1b;
-$muted: #7b7b7b;
-$border: #e6e6e6;
-$radius: 8px;
 $color-base: #060b35;
 $color-primary: #00acdc;
 $color-title-hover: #34568b;
 $bg: #fff;
+$text: #1b1b1b;
+$muted: #7b7b7b;
+$border: #e6e6e6;
+$yellow-stars: #ffde6a;
 $stars-gap: 7px;
 $stars-margin-vertical: 0.35rem;
 $star-width: 13px;
 $star-height: 15px;
-$yellow-stars: #ffde6a;
 $font-family: 'Roboto', sans-serif;
-
-:root {
-  --color-base: #060b35;
-  --color-primary: #00acdc;
-  --color-title-hover: #34568b;
-  --pad-x: 40px;
-  --pad-y: 50px;
-  --gap-x: 46px;
-  --gap-y: 48px;
-  --card-width: 200px;
-  --dur: 300ms;
-  --ease: ease;
-  --text: #1b1b1b;
-  --muted: #7b7b7b;
-  --bg: #fff;
-  --border: #e6e6e6;
-  --radius: 8px;
-}
 
 * {
   margin: 0;

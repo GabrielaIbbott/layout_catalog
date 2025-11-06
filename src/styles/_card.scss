@@ -3,18 +3,18 @@
 
 .card {
   display: grid;
-  width: var(--card-width);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--bg);
+  width: $card-width;
+  border: 1px solid $border;
+  border-radius: $radius;
+  background: $bg;
   overflow: visible;
   text-align: left;
   position: relative;
   transform-origin: center center;
   box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   transition:
-    transform var(--dur) var(--ease),
-    box-shadow var(--dur) var(--ease);
+    transform $dur $ease,
+    box-shadow $dur $ease;
   will-change: transform;
 
   &:hover {
@@ -29,7 +29,7 @@
   place-items: center;
   width: 100%;
   padding: 1rem;
-  background: var(--bg);
+  background: $bg;
   margin-top: 16px;
   margin-bottom: 10px;
 }
@@ -57,17 +57,17 @@
   line-height: 1.5;
   margin-bottom: 0.35rem;
   font-weight: 600;
-  color: var(--text);
-  transition: color var(--dur) var(--ease);
+  color: $text;
+  transition: color $dur $ease;
 
   .card:hover & {
-    color: var(--color-title-hover);
+    color: $color-title-hover;
   }
 }
 
 .card__description {
   font-size: 0.62rem;
-  color: var(--muted);
+  color: $muted;
 }
 
 .card__rating {
@@ -79,15 +79,15 @@
 
 .stars {
   display: flex;
-  gap: var(--stars-gap, 7px);
+  gap: $stars-gap;
   align-items: center;
   line-height: 0;
 }
 
 .stars__item {
   display: inline-block;
-  width: var(--star-width, 13px);
-  height: var(--star-height, 15px);
+  width: $star-width;
+  height: $star-height;
   background-image: url('../images/star.svg');
   background-repeat: no-repeat;
   background-position: center;
@@ -100,7 +100,7 @@
 
 .card__reviews {
   font-size: 0.62rem;
-  color: var(--muted);
+  color: $muted;
 }
 
 .card__price {
@@ -108,13 +108,14 @@
   grid-template-columns: 1fr auto;
   align-items: center;
   font-size: 0.75rem;
-  color: var(--muted);
-  margin-bottom: 0.5rem;
+  color: $muted;
+  margin-top: -2px;
+  margin-bottom: 0.75rem;
 
   strong {
     font-size: 1rem;
     font-weight: 700;
-    color: var(--text);
+    color: $text;
   }
 }
 
@@ -129,18 +130,18 @@
   font-size: 0.85rem;
   border: 1px solid transparent;
   border-radius: 5px;
-  background: var(--color-primary);
+  background: $color-primary;
   color: #fff;
   text-decoration: none;
   transition:
-    background-color var(--dur),
-    color var(--dur),
-    border-color var(--dur);
+    background-color $dur,
+    color $dur,
+    border-color $dur;
 
   &:hover {
-    background: #fff;
-    color: var(--color-primary);
-    border-color: var(--color-primary);
+    background: $bg;
+    color: $color-primary;
+    border-color: $color-primary;
     text-decoration: none;
   }
 }
