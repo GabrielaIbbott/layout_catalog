@@ -2,7 +2,7 @@
 
 .stars {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: $stars-gap;
   margin: $stars-margin-vertical 0;
 }

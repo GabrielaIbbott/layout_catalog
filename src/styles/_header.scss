@@ -8,7 +8,7 @@
   background: $bg;
   border-bottom: 1px solid #f2f2f2;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
-  padding: 0.6rem $pad-y;
+  padding: 0 $pad-y;
 }
 
 .header__logo-img {
@@ -31,7 +31,7 @@
 }
 
 .header__list > li {
-  margin-right: 0.5rem;
+  margin-right: 22px;
 }
 
 .header__list > li:last-child {
@@ -41,14 +41,14 @@
 .header__link {
   display: flex;
   align-items: center;
-  height: 40px;
+  height: 60px;
   color: $color-base;
   text-decoration: none;
-  font-size: 0.75rem;
+  font-size: 12px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: normal;
-  padding: 0 6px;
+  padding: 0 -3px;
   transition: color $dur $ease;
 
   &:hover,
@@ -64,10 +64,9 @@
   &::after {
     content: '';
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -10px;
-    width: 36px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     height: 4px;
     background: $color-primary;
     border-radius: 2px;
@@ -77,14 +76,14 @@
 
 @media (max-width: 520px) {
   .header {
-    padding: 0.6rem 12px;
+    padding: 0 12px;
     flex-direction: column;
     align-items: center;
-    gap: 0.4rem;
+    gap: 6px;
   }
 
   .header__logo {
-    margin-bottom: 0.25rem;
+    margin-bottom: 4px;
   }
 
   .header__nav {
@@ -97,7 +96,7 @@
   }
 
   .header__list > li {
-    margin-right: 0.8rem;
+    margin-right: 22px;
   }
 
   .header__logo-img {
@@ -105,10 +104,10 @@
   }
 
   .header__link {
-    height: 36px;
+    height: 48px;
   }
 
   .is-active::after {
-    bottom: -12px;
+    height: 3px;
   }
 }
