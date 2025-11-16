@@ -2,7 +2,7 @@
 
 .stars {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: $stars-gap;
   margin: $stars-margin-vertical 0;
 }
@@ -15,5 +15,5 @@
 }
 
 .stars__item--active {
-  background: url('../images/star-active.svg') no-repeat center / contain;
+  background-image: url('../images/star-active.svg');
 }

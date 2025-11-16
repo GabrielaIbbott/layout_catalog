@@ -14,14 +14,14 @@
   text-align: left;
   position: relative;
   transform-origin: center center;
-  box-shadow: 0 0 0 rgba(68, 68, 68, 0);
+  box-shadow: none;
   transition:
     transform $dur $ease,
     box-shadow $dur $ease;
   will-change: transform;
 
   &:hover {
-    transform: scale(1.05);
+    transform: scale(1.2);
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
     z-index: 3;
   }
@@ -32,15 +32,18 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: 135px;
   margin-top: 15px;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
   background: $bg;
+  overflow: hidden;
 }
 
 .card__img {
-  width: 96%;
-  height: auto;
+  max-width: 100%;
+  max-height: 100%;
   object-fit: contain;
+  display: block;
 }
 
 .card__body {
@@ -63,10 +66,10 @@
   font-weight: 500;
   color: $text;
   transition: color $dur $ease;
+}
 
-  .card:hover & {
-    color: $color-title-hover;
-  }
+.card:hover .card__title {
+  color: $color-title-hover;
 }
 
 .card__description {
@@ -78,7 +81,7 @@
   display: flex;
   align-items: center;
   gap: 25px;
-  margin: 2 0 8px;
+  margin: 0 0 8px;
 }
 
 .stars {
@@ -142,7 +145,7 @@
     border-color $dur;
 
   &:hover {
-    background: $bg;
+    background: #fff;
     color: $color-primary;
     border-color: $color-primary;
     text-decoration: none;
